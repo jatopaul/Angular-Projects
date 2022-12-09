@@ -1,0 +1,251 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <a href="/"><img src="/assets/amazon--600.png" height="40" alt="Amazon" /></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav me-5 mb-2 mb-lg-0 mx-auto">
+        <li class="nav-item">
+          <form class="d-flex" role="search">
+            <input class="form-control me-0 me-2 mx-5 mb-lg-0" style="width: 400px" type="search" placeholder="Search"
+              aria-label="Search" />
+            <button class="btn btn-outline-success me-5 me-1 mb mx-auto" type="submit">
+              Search
+            </button>
+          </form>
+        </li>
+
+        <li class="dropdown nav-item">
+          <b><a style="text-decoration: none" class="dropbtn nav-link"><i class="fa-sharp fa-solid fa-right-to-bracket"
+                style="font-size: 20px; color: white"></i>
+              Login</a></b>
+          <div class="dropdown-content">
+            <a routerLink="first" style="text-decoration: none"> Sign Up</a>
+
+            <a routerLink="second" style="text-decoration: none">
+              <i class="fa-solid fa-user-secret" style="font-size: 20px"></i>My
+              Account</a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <b><a class="nav-link active" style="text-decoration: none" aria-current="page" href="#"><i
+                class="fa-solid fa-cart-shopping" style="font-size: 22px; color: white"></i>Cart</a></b>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+--> <br /><br /><br />
+
+<nav class="navbar-expand-lg navbar navbar-dark bg-secondary">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-5 mb-0 mb-lg-1 mx-auto">
+        <li class="nav-item">
+          <b><a class="nav-link active" style="text-decoration: none" aria-current="page" href="/"><i
+                class="fa-solid fa-home" style="font-size: 22px"></i>Home</a></b>
+        </li>
+        <li class="nav-item">
+          <b><a class="nav-link active" style="text-decoration: none" aria-current="page" href=""><i
+                class="fa-solid fa-mobile-screen-button" style="font-size: 22px"></i>Mobiles</a></b>
+        </li>
+        <li class="nav-item">
+          <b><a class="nav-link active" style="text-decoration: none" aria-current="page" href="#"><i
+                class="fa-solid fa-headphones" style="font-size: 22px"></i>Electronics</a></b>
+        </li>
+
+        <li class="dropdown nav-item">
+          <b><a class="nav-link" style="text-decoration: none">
+              <i class="fa-sharp fa-solid fa-shirt" style="font-size: 22px"></i>Fashion</a></b>
+          <div class="dropdown-content">
+            <a class="" href="#">Mens Wear</a>
+            <a href="#">Women Wear</a>
+            <a href="#">Kids Wear</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <b><a class="nav-link active" style="text-decoration: none" aria-current="page" href="#"><i
+                style="font-size: 22px" class="fa-solid fa-blender-phone"></i>Applicances</a></b>
+        </li>
+        <li class="nav-item">
+          <b><a class="nav-link active" style="text-decoration: none" aria-current="page" href="#"><i
+                style="font-size: 22px" class='fas fa-dolly' ></i>Beauty and Toys </a></b>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
+
+<app-main-first></app-main-first><br /><br />
+<app-main-second></app-main-second>
+
+<br />
+
+
+<div id="buttonalign" class="d-grid gap-1 col-4 mx-auto">
+  <button class=" btn btn-outline-info"><a style="text-decoration: none;" href="#">Home</a></button>
+
+</div>
+<br>
+
+<!-- <button (click)="get()">Datas</button>
+  <div *ngFor="let item of data.users">
+    <div>{{item.id}}</div>
+    <div>{{item.firstName}}</div>
+   <img src={{item.image}}>
+
+  </div> -->
+
+<footer class="bg-dark text-center text-white">
+  <div class="container p-4">
+    <section class="mb-4">
+      <strong>
+        <div>FOLLOW</div>
+      </strong>
+
+      <a class="btn btn-outline-light btn-floating m-1" href="#" role="button"><i class="fab fa-facebook-f"></i></a>
+
+      <a class="btn btn-outline-light btn-floating m-1" href="#" role="button"><i class="fab fa-twitter"></i></a>
+
+      <a class="btn btn-outline-light btn-floating m-1" href="#" role="button"><i class="fab fa-google"></i></a>
+
+      <a class="btn btn-outline-light btn-floating m-1" href="#" role="button"><i class="fab fa-instagram"></i></a>
+
+      <a class="btn btn-outline-light btn-floating m-1" href="#" role="button"><i class="fab fa-linkedin-in"></i></a>
+
+      <a class="btn btn-outline-light btn-floating m-1" href="#" role="button"><i class="fab fa-github"></i></a>
+    </section>
+    <section class="">
+      <form action="">
+        <div class="row d-flex justify-content-center">
+          <div class="col-auto">
+            <p class="pt-2">
+
+            </p>
+          </div>
+
+          <div class="col-md-5 col-12">
+            <div class="form-outline form-white mb-4">
+              <input type="email" id="form5Example21" class="form-control" /><br>
+              <label class="form-label" for="form5Example21">Email address</label>
+            </div>
+          </div>
+
+          <div class="col-auto">
+            <button type="submit" class="btn btn-outline-light mb-4">
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <section class="mb-4">
+      <p>
+        Get monthly updates and free resources.
+      </p>
+    </section>
+
+    <section class="">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Links</h5>
+
+          <ul class="list-unstyled mb-0 ">
+            <li>
+              <a href="#" style="text-decoration: none;" class="text-white">Website Builder</a>
+            </li>
+            <li>
+              <a href="#" style="text-decoration: none;" class="text-white">Download for Mac</a>
+            </li>
+            <li>
+              <a href="#" style="text-decoration: none;" class="text-white">Download for Windows</a>
+            </li>
+
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Recent News</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#" style="text-decoration: none;" class="text-white">About Us</a>
+            </li>
+            <li>
+              <a href="#" style="text-decoration: none;" class="text-white">Service</a>
+            </li>
+
+
+          </ul>
+        </div>
+
+
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Make Money with Us
+          </h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#" style="text-decoration: none;" class="text-white">Sell on Amazon</a>
+            </li>
+            <li>
+              <a href="#" style="text-decoration: none;" class="text-white">Sell under Amazon Accelerator
+              </a>
+            </li>
+
+            <li>
+              <a href="#" style="text-decoration: none;" class="text-white">Fulfilment by Amazon
+              </a>
+            </li>
+            <li>
+              <a href="#" style="text-decoration: none;" class="text-white">Amazon Pay on Merchants
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Contacts</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              Email: jatopaul1@gmail.coom
+            </li>
+            <li>
+              Phone: +1 (0) 000 0000 001
+            </li>
+            <li>
+              Fax: +1 (0) 000 0000 002
+
+
+            </li>
+
+          </ul>
+        </div>
+
+
+      </div>
+    </section>
+  </div>
+
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+    Copyright:<br>And
+    conditions of Use & Sales.<br>
+
+    Interest-Based Ads
+    © 1996-2022, Amazon.com, Inc. or its affiliates
+    <a class="text-white" href="amazon.com">Amazon.com</a>
+  </div>
+
+</footer>

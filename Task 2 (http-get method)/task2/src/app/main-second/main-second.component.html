@@ -1,0 +1,37 @@
+<div class="container">
+  <br />
+
+  <div id="buttonalign" class="d-grid gap-1 col-4 mx-auto">
+    <h2 class="font-weight-bold mb-2">Categories</h2>
+    <p class="font-italic text-muted mb-4">Mobile Brands</p>
+    <button class=" btn btn-outline-info" (click)="get()">Datas</button>
+
+  </div>
+
+
+
+  <div class="card">
+    <div class="row">
+      <div *ngFor="let i of data.products" class="col-lg-2 col-sm-4">
+        <!-- <ng-container *ngIf="i.category == 'fragrances'"> -->
+          <div class="text-block">
+            <span class="badge">Trending</span>
+            <img src="{{ i.images[0] }}" class="card-img-top" width="150px" height="180px" />
+            
+          </div>
+          <div class="card-body">
+            <p>{{ i.title }}</p>
+            <p>Category: {{ i.category }}</p>
+            <p>Description:{{ i.description }}</p>
+            <p>Brand: {{ i.brand }}</p>
+            <p>Ratings: {{ i.rating }}</p>
+            <p>{{ i.price }}</p>
+            <div class="product-price">
+              <small>Price: ${{ i.price }}</small>
+            </div>
+          </div>
+        <!-- </ng-container> -->
+      </div>
+    </div>
+  </div>
+</div>
