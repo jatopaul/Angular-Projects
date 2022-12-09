@@ -1,0 +1,48 @@
+
+<ul>
+<!-- <li><a routerLink="home"  style="color: rgb(0, 0, 0);" checked>Home</a></li>
+<li><a routerLink="contact-us" style="color: rgb(11, 148, 148);">Contact Us</a></li>
+<li><a routerLink="about" style="color:rgb(132, 165, 42);">About Us</a></li> -->
+<li><a routerLink="preloader" style="color:rgb(132, 165, 42);">Preloader</a></li>
+</ul>
+
+<router-outlet></router-outlet>
+
+
+<h2>{{title | uppercase}}</h2>
+<h2>{{title | lowercase}}</h2>
+<h2>{{title | titlecase}}</h2>
+<h2>{{title | json}}</h2>
+<!-- for slice first value will be added and the last value is removed -->
+<h2>{{title | slice:2:5}}</h2>
+<!-- taking the point values upto the 3 decimal point -->
+<h2>{{5.8722 | number:'1.2-3'}}</h2>
+<h2>{{5.8722 | number:'1.2-3'}}</h2>
+<h2>{{timee | date:'fullDate'}}</h2>
+<h2>{{cap(title)}}</h2>
+<h2>{{cap(text)}}</h2>
+
+
+
+
+
+<!-- {{obj| json}} -->
+
+<!-- <ul>
+  <li>{{keys[0] | pipes: values[0]}}</li>
+  <li>{{keys[1] | pipes: values[1]}}</li>
+  <li>{{keys[2] | pipes: values[2]}}</li>
+  <li>{{keys[3] | pipes: values[3]}}</li>
+</ul>
+<h4>{{keys[0] | pipes: values[0]}}</h4>
+<h4>{{keys[1] | pipes: values[1]}}</h4>
+<h4>{{keys[2] | pipes: values[2]}}</h4>
+<h4>{{keys[3] | pipes: values[3]}}</h4>
+<h4>{{keys[4] | pipes: values[4]}}</h4> -->
+
+<ul class="new" *ngFor="let item of obj">
+  <li >
+    {{item.Name}} ==> {{item.Name}}{{item.id | pipes }}
+  </li>
+</ul>
+
