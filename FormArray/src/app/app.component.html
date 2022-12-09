@@ -1,0 +1,71 @@
+<h1>{{ title }}</h1>
+<form [formGroup]="loginform" class="form" (ngSubmit)="submit()">
+  <label>PAN <label style="color: red">*</label></label>
+  <br />
+  <input type="text" formControlName="pan" />
+  <span style="color: red" *ngIf="pan && pan.invalid && pan.touched"
+    ><br /><i class="fas fa-exclamation-circle" style="font-size: 16px"></i
+    >Error :This is a Mandatory Field</span
+  ><br />
+  <br />
+  <label>Full Name <label style="color: red">*</label></label
+  ><br />
+  <input type="text" formControlName="user" />
+  <span style="color: red" *ngIf="user && user.invalid && user.touched"
+    ><br /><i class="fas fa-exclamation-circle" style="font-size: 16px"></i
+    >Error :This should be TitleCase and Mandatory Field</span
+  ><br />
+  <br />
+  <label>Date of Birth <label style="color: red">*</label></label
+  ><br />
+  <input type="date" formControlName="date" />
+  <span style="color: red" *ngIf="date && date.invalid && date.touched"
+    ><br /><i class="fas fa-exclamation-circle" style="font-size: 16px"></i
+    >Error :This is a Mandatory Field</span
+  ><br />
+  <br />
+
+  <label>Mobile Number <label style="color: red">*</label></label
+  ><br /><br />
+  <input
+    type="text"
+    [maxlength]="10"
+    [minlength]="10"
+    formControlName="mobile"
+    placeholder="Add Mobile Number"
+  />
+  <span style="color: red" *ngIf="mobile && mobile.invalid && mobile.touched">
+    <br /><i class="fas fa-exclamation-circle" style="font-size: 16px"></i>Error
+    :This sholud be Mobile nuber</span
+  ><br />
+
+  <div formArrayName="numbers">
+    <label>Skill <label style="color: red">*</label></label
+    ><br /><br />
+    <ng-container
+      *ngFor="let Skills of loginform.controls.numbers.controls; let i = index"
+    >
+      <label> Adding Skills {{ i }}<br /></label>
+      <input
+        type="text"
+        [maxlength]="10"
+        [minlength]="10"
+        formControlName="{{ i }}"
+        placeholder="Add Skill"
+      /><br />
+      <span
+        style="color: red"
+        *ngIf="Skills && Skills.invalid && Skills.touched"
+      ><i class="fas fa-exclamation-circle" style="font-size: 16px"></i>Error
+      :This sholud be Mandatory</span><br><br>
+
+
+      <button class="delete" (click)="delete(i)">Remove</button><br>
+    </ng-container>
+    <br /><button (click)="addSkill()" class="buttonadd">
+      <i>+</i> Add Skills
+    </button>
+    <br />
+  </div>
+  <button class="button-8" style="width: 100px;" [disabled]="loginform.invalid">Login</button>
+</form>

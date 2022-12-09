@@ -1,0 +1,98 @@
+input.ng-invalid.ng-touched
+{
+    border: 1px solid red !important;
+}
+input.ng-valid
+{
+    border: 1px solid rgb(0, 183, 255) !important;
+}
+/* .form{
+  border: 2px solid rgb(107, 116, 121);
+} */
+input,label,button{
+  padding-top: 10px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+input{
+ font-size: large;
+}
+.buttonadd{
+  font-size: 16px;
+  font-weight: 700;
+  color: rgb(26, 206, 212);
+  border: 1px solid rgb(0, 183, 255);
+}
+.buttonadd i{
+  line-height: 12px;
+  display: inline-block;
+  position: relative;
+  color: rgb(26, 206, 212);
+
+}
+.buttonadd:hover{
+  border: 1px solid rgb(0, 183, 255);
+  background-color: white;
+  color: rgb(25, 165, 247);
+  font-size: 18px;
+}
+
+.delete
+{
+  border: 1px solid rgb(153, 36, 0);
+  background-color: white;
+  color: rgb(177, 49, 17);
+  font-size: 16px;
+}
+
+.delete:hover
+{
+  border: 1px solid rgb(153, 36, 0);
+  background-color: white;
+  color: rgb(177, 49, 17);
+  font-size: 18px;
+}
+
+.login{
+  border: 1px solid rgb(0, 79, 153);
+  background-color: white;
+  color: rgb(177, 49, 17);
+  font-size: 16px;
+}
+
+
+/* CSS */
+.button-89 {
+  --b: 3px;   /* border thickness */
+  --s: .45em; /* size of the corner */
+  --color: #373B44;
+
+  padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+  transition: .3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: .6em;
+  font-size: 16px;
+
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-89:hover,
+.button-89:focus-visible{
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .05em;
+}
+
+.button-89:active {
+  background: var(--color);
+  color: #fff;
+}
